@@ -1,0 +1,316 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans', 'sans-serif';
+  background-color: #fff;
+  font-size: .8rem !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.containerCls {
+  margin-left: 0px !important;
+  max-width: 100% !important;
+}
+
+.custom-primary {
+  background-color: #e73319 !important;
+}
+.custom-bg {
+  background-color: white;
+}
+
+.listCard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.listCard:hover{
+  box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.bottomCard {
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+}
+
+.bottomCard:hover{
+  transform: scale(1.1);
+}
+
+.cardBudget {
+    width: 19rem;
+    max-height: 47px !important;
+    height: 47px !important;
+    margin: 5px 0;
+    align-items: center;
+}
+
+.planeCls {
+  height: 23px !important;
+    width: 23px !important;
+    margin-left: 7px !important;
+    margin-top: 8px !important;
+}
+
+.custom-btn {
+  background-color: white !important;
+  border-color: #e73319 !important;
+  color: #e73319 !important;
+  font-size: .9rem !important;
+}
+
+.btnGroup label {
+  white-space: nowrap !important;
+  font-size: .7rem !important;
+}
+
+.btnGroup {
+  width: 72% !important;
+  height: 32px !important;
+}
+
+.homeContainerCls {
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+  background-color: #f7f7f7;
+  max-width: 100% !important;
+}
+
+.filterDetailCls {
+  font-size: .7rem !important;
+}
+.filterDetailCls a {
+  padding: 0rem 0rem !important;
+}
+
+.custom-color {
+  color: #e73319 !important;
+}
+
+.navCls {
+  border-bottom: 3px solid transparent;
+}
+
+.navCls a.active {
+  border-bottom: 3px solid #e73319;
+}
+
+.brandCls {
+  font-size: 1.5rem !important;
+}
+ nav .collapse {
+   margin-left: 60px!important;
+ }
+
+ .navCls a:not(:first-child){
+    padding-left: 3.2rem !important;
+ }
+ .specialNavCls {
+   margin-left: auto;
+ }
+
+ .filterCls {
+   display: flex;
+   width: 400px;
+   height: 100vh;
+   
+ }
+ .filterCls img span{
+    margin-left: 30px;
+ }
+
+ *, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1, p {
+  margin: 0 0 1em 0;
+}
+
+.wrapper {
+  max-width: 100%;
+  margin: 0 20px;
+  display: grid;
+}
+
+@media screen and (min-width: 1000px) {
+
+  /* no grid support? */
+  .sidebar {
+    float: left;
+    width: 19.1489%;
+  }
+  .wrapper {
+    margin: 0 auto;
+    grid-template-columns: 1fr 3fr;
+    margin-left: 0px !important;
+  }
+  
+  .header, .footer {
+    grid-column: 1 / -1;
+    /* needed for the floated layout */
+    clear: both;
+  }
+
+  .footer {
+    height: 95px !important;
+    position: absolute;
+    bottom: 0;
+    width: 100% !important;
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+.footerDetail {
+  background-color: #191818;
+  display: flex !important;
+  color: rgb(241, 237, 237);
+  height: 38px !important;
+}
+
+.footerDetail p {
+  margin-top: 7px;
+}
+
+.footerDetail :last-child {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px     rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+
+.wrapper::-webkit-scrollbar-track-piece:end {
+background: transparent;
+margin-bottom: 10px; 
+}
+
+.wrapper::-webkit-scrollbar-track-piece:start {
+background: transparent;
+margin-top: 10px;
+}
+
+.filterContainer {
+font-size: .7rem;
+margin-left: 35px !important;
+margin-top: 20px !important;
+}
+
+.filterContainer .row:not(:first-child) {
+margin-top: 12px !important;
+}
+
+.transparentBtn{
+  background-color: transparent !important;
+  border: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px     rgba(0,0,0,0.5); 
+}
+
+.content {
+  float: right;
+  width: 79.7872%;
+  max-height: calc(100vh - 150px);
+  overflow-y: scroll;
+  margin-left: 50px !important;
+}
+
+.content .card:not(:first-child){
+  margin-top: 12px;
+}
+
+.header {
+  height: 55px !important;
+  max-height: 55px !important;
+}
+
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.custom-list {
+   display: flex;
+   flex-direction: column;
+}
+
+.brandDetailCls {
+  display: flex !important;
+  flex-direction: row !important;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  border: 0px !important;
+}
+
+.brandDetailCls span:not(:first-child) {
+  color: gray;
+  font-size: 0.7rem !important;
+}
+
+.brandDetailCls div:not(:first-child){
+  display: flex !important;
+  flex-direction: column;
+}
+
+.listItemCls {
+  display: flex !important;
+  flex-direction: column;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  border: 0px !important;
+}
+
+.timeCls {
+  margin-top: 0px !important;
+  margin-bottom: 7px !important;
+  margin: auto !important;
+}
+
+.stationCls {
+  margin: auto !important;
+  margin-top: 12px !important;
+}
+
+.listItemCls span:not(:first-child) {
+  color: gray;
+  font-size: 0.7rem !important;
+}
+
+.image-cropper {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.specialListCls {
+  margin: auto !important;
+}
+
+.image-cropper img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
